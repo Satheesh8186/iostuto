@@ -6,5 +6,7 @@
         <page name='higherOrderFunctions'/>
         <page name='Deffer'/>
         <page name='TwoSumProblem'/>
+        <page name='Palindromes'/>
+        <page name='LinkedList'/>
     </pages>
 </playground>

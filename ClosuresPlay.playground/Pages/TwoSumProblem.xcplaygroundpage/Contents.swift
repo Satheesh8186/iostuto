@@ -3,17 +3,17 @@
 import Foundation
 
 //two sum problem: Given an array of integer num and an integer taget,return the
-let  numbs=[2,7,11,15,5,3]
+let  numbs=[15,2,7,11,5,3]
 let target = 20
 //o/p:[3,4]
 
 func addTwoNumberInArray(_ numbs : [Int], target:Int) -> [Int]{
-    var dictor = [Int:Int]()
+    var dict = [Int:Int]()
     for (index,value) in numbs.enumerated() {
-        if let oneIndex = dictor[target - value], oneIndex != index{
+        if let oneIndex = dict[target - value], oneIndex != index{
           return [oneIndex,index]
         }
-        dictor[value] = index
+        dict[value] = index
     }
     return []
 }
@@ -28,12 +28,12 @@ func fibnaicSeriesAtGivenNumber(numb : Int)->Int{
         return numb
     }
     var firstNumber = 1
-    var seconDNumber = 1
+    var secondNumber = 1
     var val = 0
     for _ in 2...numb {
-        val = firstNumber + seconDNumber
-        firstNumber = seconDNumber
-        seconDNumber = val
+        val = firstNumber + secondNumber
+        firstNumber = secondNumber
+        secondNumber = val
     }
     return val
 }
@@ -163,3 +163,30 @@ quickSort(arrayInput: arrayObj)
 //merge sort
 //https://www.youtube.com/watch?v=DfO089qWEE8,https://www.youtube.com/watch?v=CLXS1XoihJI
 
+
+
+//func mostCommonElement<T: Hashable>(in list: [T]) -> T? {
+//    var countDict: [T: Int] = [:]
+//
+//    for element in list {
+//        countDict[element, default: 0] += 1
+//    }
+//
+//    var mostCommonElement: T?
+//    var maxCount = 0
+//
+//    for (element, count) in countDict {
+//        if count > maxCount {
+//            mostCommonElement = element
+//            maxCount = count
+//        }
+//    }
+//
+//    return mostCommonElement
+//}
+//let list = [1, 2, 3, 2, 2, 4, 5, 1, 2, 4, 4, 4]
+//if let mostCommon = mostCommonElement(in: list) {
+//    print("The most common element is: \(mostCommon)")
+//} else {
+//    print("The list is empty.")
+//}
